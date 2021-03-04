@@ -1,0 +1,36 @@
+{
+	"name": "express-template",
+	"version": "1.0.0",
+	"description": "Express template",
+	"author": "Tan Dang <tandm160797@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"dev": "nodemon -r dotenv/config ./src/server.js dotenv_config_path=./.env",
+		"build": "rm -rf dist && webpack --mode development --config ./webpack.config.js",
+		"start": "node ./dist/server.js",
+		"node-sass": "node-sass ./public/assets/scss -o ./public/assets/css",
+		"node-sass:watch": "node-sass -w ./public/assets/scss -o ./public/assets/css -w"
+	},
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mongoose": "^5.11.15",
+		"mongoose-delete": "^0.5.3",
+		"pug": "^3.0.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.13.8",
+		"@babel/preset-env": "^7.13.9",
+		"babel-loader": "^8.2.2",
+		"dotenv": "^8.2.0",
+		"morgan": "^1.10.0",
+		"node-sass": "^5.0.0",
+		"nodemon": "^2.0.7",
+		"webpack": "^5.24.3",
+		"webpack-cli": "^4.5.0",
+		"webpack-node-externals": "^2.5.2"
+	},
+	"type": "module"
+}
